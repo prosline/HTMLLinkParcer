@@ -34,7 +34,7 @@ func text(n *html.Node) string {
 		return ""
 	}
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
-		ret += text(c) + " "
+		ret += text(c)
 	}
 	ret = strings.Join(strings.Fields(ret), " ")
 	return ret
